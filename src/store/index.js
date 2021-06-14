@@ -1,7 +1,6 @@
 import { createStore } from 'vuex';
-import posts from './modules/posts';
-import rs from './modules/rs';
+import data from './modules/data';
 
 export default createStore({
-    modules: { posts, rs },
+    modules: { data },
 });

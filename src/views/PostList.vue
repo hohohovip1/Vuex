@@ -3,7 +3,6 @@
         <div v-for="post in posts" :key="post.id">
             <h1>{{ post.title }}</h1>
         </div>
-        <div>{{ rs }}</div>
     </div>
 </template>
 
@@ -11,12 +10,10 @@
 import { mapState } from 'vuex';
 export default {
     computed: {
-        ...mapState('posts', ['posts']),
-        ...mapState('rs', ['rs']),
+        ...mapState('data', ['posts']),
     },
     created() {
-        this.$store.dispatch('posts/loadPosts');
-        this.$store.dispatch('rs/loadRS');
+        this.$store.dispatch('data/loadPosts');
     },
 };
 </script>
